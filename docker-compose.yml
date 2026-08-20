@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: go-practice
+    environment:
+      POSTGRES_USER: go-backend
+      POSTGRES_PASSWORD: iknow
+      POSTGRES_DB: go-hto
+    ports:
+      - '5432:5432'
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
