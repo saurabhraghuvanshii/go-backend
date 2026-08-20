@@ -12,12 +12,13 @@ import (
 
 type application struct {
 	config config
-	store store.Storage
+	store  store.Storage
 	db     dbConfig
 }
 
 type config struct {
 	addr string
+	db   dbConfig
 }
 
 type dbConfig struct {
